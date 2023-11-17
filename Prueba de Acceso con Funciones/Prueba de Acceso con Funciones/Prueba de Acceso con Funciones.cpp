@@ -1,4 +1,4 @@
-// Control de acceso
+// Control de acceso ejercicios para probar las funciones
 
 #include <stdlib.h>  // Incluimos librerias necearias
 #include <iostream>  // esta libreria nos permite utilizar la funcion time 
@@ -8,19 +8,21 @@ using namespace std;  // esta linea nos permite omitir escribir std a lo largo d
 
 int numero1 , numero2 ;
 
+void Aleatorios() {
+    srand(time(NULL));  //indica que elprograma tome la "semilla" para generar su random 
+    //basada en la función de la hora del procesador.
 
+    numero1 = 1 + rand() % (11 - 1);  //genera el primer numero aleatorio entre el 1 y el 10
+    numero2 = 1 + rand() % (11 - 1);  //genera el segundo numero aleatorio entre el 1 y el 10
+}
 
-int Prueba( int numero1, int numero2) {
+int Prueba() {
     int  suma = 0, intentos = 5;
     do  // sentencia hacer mientras
     {
        
-        srand(time(NULL));  //indica que elprograma tome la "semilla" para generar su random 
-                            //basada en la función de la hora del procesador.
-
-        numero1 = 1 + rand() % (11 - 1);  //genera el primer numero aleatorio entre el 1 y el 10
-        numero2 = 1 + rand() % (11 - 1);  //genera el segundo numero aleatorio entre el 1 y el 10
-       
+        
+        Aleatorios();
         // se presenta el mensaje en pantalla 
         cout << "Introduzca el resultado de la siguiente suma: " << numero1 << " + " << numero2 << " = ";
 
@@ -58,7 +60,7 @@ int main() // inicio del programa
     cout << "Bienbenido, para demostrar que no es un robot se le pedira ingresar el resultado de una suma \n";
     system ("pause");
     
-    Prueba (numero1, numero2); // llamada a la funcion prueba
+    Prueba (); // llamada a la funcion prueba
    
     return 0;
 }
