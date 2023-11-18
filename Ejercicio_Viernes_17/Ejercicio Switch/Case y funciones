@@ -1,0 +1,65 @@
+// Control de acceso ejercicios para probar las funciones
+
+#include <stdlib.h>  // Incluimos librerias necearias
+#include <iostream>  // esta libreria nos permite utilizar la funcion time 
+#include <stdio.h>
+#include <conio.h>
+using namespace std;  // esta linea nos permite omitir escribir std a lo largo del programa
+
+int eleccion, opcion = 0;
+string NombreComp;
+int PresentarMenu()
+{
+   
+   cout << "Para entrar al programa presione 1 y Indique su nombre completo: ";
+   cout << "\n Para acceder al menu 2 debe completar el 1 paso";
+   cout << "\n Si a cumplido los dos pasos anteriores pulse 3 y estara dentro de la APP\n";
+   cout << "Indique una opcion: ";
+   cin >> eleccion;
+ return(0);
+}
+
+int main()
+{
+   PresentarMenu();
+   switch(eleccion) {
+  case 1:
+    cout << "Ingrese su nombre completo ";
+    cin.ignore();
+    getline(cin, NombreComp);
+    opcion = 1;
+    break;
+  case 2:
+    if (opcion = 1)
+    {
+        cout <<"\n Bienvenido " << NombreComp;
+        cout <<"";
+        opcion = 2;
+    }
+    else
+    {
+        cout <<"\n Usted no a ingresado por la opcion 1";
+        system("clear");
+        opcion = 0;
+        PresentarMenu();
+        }
+    break;
+   case 3:
+    if (opcion = 2)
+    {
+        
+        
+        
+    }
+   
+    // code block
+    break; 
+  default:
+    // code block
+     break;
+}
+   
+   
+   
+return(0);   
+}
