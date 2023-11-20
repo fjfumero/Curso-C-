@@ -39,19 +39,19 @@ int main()
         getline (cin , NombreComp);
         cout << "\n Ingrese la edad de " << NombreComp << " : ";
         cin >> edades;
-      
+        Aula * nombre = new Aula(CantAlumnos);
         Aula.nombre[i] = NombreComp;
         Aula.edad[i] = edades;
    }
-    //Aula* nombre = new Aula(2);
-    class Aula; // Creamos class alumno
+    
+    /*class Aula; // Creamos class alumno
     Aula.edad = 21;
     Aula.nombre = "paco";
     cout << "Alumno: " << alumno.nombre << " edad: " << alumno.edad << "\n";
     clase alumno2;
     alumno2.edad = 22;
     alumno2.nombre = "pepe";
-    cout << "Alumno: " << alumno2.nombre << " edad: " << alumno2.edad << "\n";
+    cout << "Alumno: " << alumno2.nombre << " edad: " << alumno2.edad << "\n";  */
     
     return 0;
 
