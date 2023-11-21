@@ -3,6 +3,7 @@
 #include <stdlib.h>  // Incluimos librerias necearias
 #include <iostream>  // esta libreria nos permite utilizar la funcion time 
 #include <stdio.h>
+#include <string>
 #include <conio.h>
 using namespace std;
 
